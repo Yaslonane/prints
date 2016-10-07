@@ -29,16 +29,69 @@ class Printer {
         
         $db = Db::getConnection();
         
-        if(isset($_POST['submit'])){
+        /*$name = "";
+        $unit = "";
+        $floor = "";
+        $department = "";
+        $cartrige = "";
+        $status = "";*/
+        
+        if(isset($_POST['submit']) && (isset($_POST['name']) || isset($_POST['unit']) || isset($_POST['floor']) || isset($_POST['department']) || isset($_POST['cartrige']) || isset($_POST['status']))){
             
-            $name = "";
-            $unit = "";
-            $floor = "";
-            $department = "";
-            $cartrige = "";
-            $status = "";
+            $sql = "SELECT * FROM print WHERE ";
+            
+            if(isset($_POST['name'])) {
+                $name = $_POST['name'];
+                $sql .= "name = '$name', ";
+            }
+            
+            if(isset($_POST['unit'])) {
+                $unit = $_POST['unit'];
+                $sql .= "unit = '$unit', ";
+            }
+            
+            if(isset($_POST['floor'])) {
+                $floor = $_POST['floor'];
+                $sql .= "floor = $floor, ";
+            }
+            
+            if(isset($_POST['department'])) {
+                $department = $_POST['department'];
+                $sql .= "department = $department, ";
+            }
+            
+            if(isset($_POST['cartrige'])) {
+                $cartrige = $_POST['cartrige'];
+                $sql .= "cartrige = $cartrige, ";
+            }
+            
+            if(isset($_POST['status'])) {
+                $status = $_POST['status'];
+            $sql .= "status = $status, ";
+            }
             
             
+            $sql = substr($sql, 0, -2);
+                                                                                echo $sql;
+           /* $result = $db->query('$sql');
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            //$row = $result->fetch();
+            
+            //if($result->fetch() == false) $print = 0;
+
+            $i = 0;
+            while($row = $result->fetch()){
+                $print[$i]['id'] = $row['id'];  
+                $print[$i]['name'] = $row['name'];  
+                $print[$i]['model'] = $row['model'];  
+                $print[$i]['unit'] = $row['unit']; 
+                $print[$i]['floor'] = $row['floor']; 
+                $print[$i]['department'] = $row['department']; 
+                $print[$i]['img'] = $row['img']; 
+                $i++;
+            }
+            
+           return $print;*/
             
             
         }else {

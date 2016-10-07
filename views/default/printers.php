@@ -76,7 +76,7 @@
 		<form action="#" method="post">
 			<div class="row">
 				 <div class="col-xs-3">
-					<input type="text" class="form-control" name="name" placeholder="Name print">
+					<input type="text" class="form-control" name="name" placeholder="Name print" <?php if(isset($_POST['name'])) echo "value='".$_POST['name']."'"; ?>> 
 				</div>
 				<div class="col-xs-3">
 				  <select class="form-control input" name="floor">
@@ -103,7 +103,7 @@
 			<br>
 			<div class="row">
 				 <div class="col-xs-3">
-					<input type="text" class="form-control" placeholder="# Unit" name="unit">
+					<input type="text" class="form-control" name="unit" placeholder="Number Unit" <?php if(isset($_POST['unit'])) echo "value='".$_POST['unit']."'"; ?>>
 				</div>
 				<div class="col-xs-3">
 				  <select class="form-control input" name="department">
@@ -264,7 +264,7 @@
 	</main>
 	<!--Футер-->
 	  <footer>
-		<p >info by IT Kursk</p>
+		<p >info by IT Kursk</p>   <?php var_dump($_POST); ?>
 	  </footer>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
