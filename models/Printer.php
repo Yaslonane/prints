@@ -40,40 +40,41 @@ class Printer {
             
             $sql = "SELECT * FROM print WHERE ";
             
-            if(isset($_POST['name'])) {
+            if(!empty($_POST['name'])) {
                 $name = $_POST['name'];
-                $sql .= "name = '$name', ";
+                $sql .= "name LIKE '%$name%', ";
             }
             
-            if(isset($_POST['unit'])) {
+            if(!empty($_POST['unit'])) {
                 $unit = $_POST['unit'];
                 $sql .= "unit = '$unit', ";
             }
             
-            if(isset($_POST['floor'])) {
+            if(!empty($_POST['floor'])) {
                 $floor = $_POST['floor'];
                 $sql .= "floor = $floor, ";
             }
             
-            if(isset($_POST['department'])) {
+            if(!empty($_POST['department'])) {
                 $department = $_POST['department'];
                 $sql .= "department = $department, ";
             }
             
-            if(isset($_POST['cartrige'])) {
+            if(!empty($_POST['cartrige'])) {
                 $cartrige = $_POST['cartrige'];
                 $sql .= "cartrige = $cartrige, ";
             }
             
-            if(isset($_POST['status'])) {
+            if(!empty($_POST['status'])) {
                 $status = $_POST['status'];
             $sql .= "status = $status, ";
             }
             
             
             $sql = substr($sql, 0, -2);
-                                                                                echo $sql;
-           /* $result = $db->query('$sql');
+            $sql .= ";";
+                                                                                //echo $sql;
+            $result = $db->query($sql);
             $result->setFetchMode(PDO::FETCH_ASSOC);
             //$row = $result->fetch();
             
@@ -91,7 +92,7 @@ class Printer {
                 $i++;
             }
             
-           return $print;*/
+           return $print;
             
             
         }else {
