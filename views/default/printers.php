@@ -73,7 +73,7 @@
 
 </header>
 <main>
-		<form action="#" method="post">
+		<form action="" method="post">
 			<div class="row">
 				 <div class="col-xs-3">
 					<input type="text" class="form-control" name="name" placeholder="Name print" <?php if(isset($_POST['name'])) echo "value='".$_POST['name']."'"; ?>> 
@@ -81,22 +81,17 @@
 				<div class="col-xs-3">
 				  <select class="form-control input" name="floor">
 					<option disabled selected>Выберите этаж </option>
-					<option>Этаж 1</option>
-					<option>Этаж 2</option>
-					<option>Этаж 3</option>
-					<option>Этаж 4</option>
-					<option>Этаж 9</option>
+                                        <?php foreach($floor as $fl): ?>
+                                        <option value="<?php echo $fl['id']; ?>" <?php if(isset($_POST['floor']) && $_POST['floor'] == $fl['id']) echo "selected"; ?>><?php echo $fl['name']; ?></option>
+                                        <?php endforeach; ?>
 				  </select>
 				</div>
 				<div class="col-xs-3">
 					<select class="form-control input" name="cartrige">
 					<option disabled selected>Выберите Картридж</option>
-					<option>Картридж 2</option>
-					<option>Картридж 7</option>
-					<option>Картридж 3</option>
-					<option>Картридж 8</option>
-					<option>Картридж 4</option>
-					<option>Картридж 5</option>
+					<?php foreach($cartrige as $ct): ?>
+                                        <option value="<?php echo $ct['id']; ?>" <?php if(isset($_POST['cartrige']) && $_POST['cartige'] == $ct['id']) echo "selected"; ?>><?php echo $ct['name']; ?></option>
+                                        <?php endforeach; ?>
 				  </select>
 				</div>
 			</div>
@@ -108,15 +103,17 @@
 				<div class="col-xs-3">
 				  <select class="form-control input" name="department">
                                         <option disabled selected>Выберите Отдел</option>
-					<option value="1">Отдел 1</option>
-					<option value="2">Отдел 2</option>
+					<?php foreach($department as $dp): ?>
+                                        <option value="<?php echo $dp['id']; ?>" <?php if(isset($_POST['department']) && $_POST['department'] == $dp['id']) echo "selected"; ?>><?php echo $dp['name']; ?></option>
+                                        <?php endforeach; ?>
 				  </select>
 				</div>
 				<div class="col-xs-3">
 				  <select class="form-control input" name="status">
                                         <option disabled selected>Выберите Статус</option>
-					<option value="1">Статус 1</option>
-					<option value="1">Статус 2</option>
+					<?php foreach($status as $st): ?>
+                                        <option value="<?php echo $st['id']; ?>" <?php if(isset($_POST['status']) && $_POST['status'] == $st['id']) echo "selected"; ?>><?php echo $st['name']; ?></option>
+                                        <?php endforeach; ?>
 				  </select>
 				</div>
 				<div class="col-xs-3">
@@ -270,6 +267,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
+    <script src="<?php echo TMPL; ?>js/bootstrap.js"></script>
   </body>
 </html>

@@ -75,6 +75,7 @@ class Printer {
             $sql .= ";";
                                                                                 //echo $sql;
             $result = $db->query($sql);
+            if($result == false) return 0;
             $result->setFetchMode(PDO::FETCH_ASSOC);
             //$row = $result->fetch();
             
@@ -119,5 +120,61 @@ class Printer {
         }
         
         
+    }
+    
+    public static function getAllFloors(){
+        
+        return self::getAllValuesInTable('*', 'floor');
+        
+    }
+    
+    public static function getAllDepartments(){
+        
+        return self::getAllValuesInTable(array('id', 'name'), 'departments', $where = 'action', $where_value = '1');
+        
+    }
+    
+    public static function getAllCartriges(){
+        
+        return self::getAllValuesInTable(array('id', 'name'), 'cartriges', $where = 'action', $where_value = '1');
+        
+    }
+    
+    public static function getAllStatuses(){
+        
+         return self::getAllValuesInTable('*', 'status');
+    }
+    
+    private static function getAllValuesInTable($columns, $table, $where = false, $where_value = false){
+        
+        $db = Db::getConnection();
+        
+        $sql = "SELECT ";
+        
+        if(is_array($columns)) $columns = implode(",", $columns);
+        
+        $sql .= "$columns FROM $table";
+        
+        if($where != false) {
+            
+            $sql .= " WHERE $where=$where_value";
+        }
+        
+        $sql .= ";";
+        
+        $result = $db->query($sql);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            //$row = $result->fetch();
+            
+            //if($result->fetch() == false) $print = 0;
+
+            $i = 0;
+            while($row = $result->fetch()){
+                $arr[$i]['id'] = $row['id'];
+                $arr[$i]['name'] = $row['name'];
+                $i++;
+            }
+            
+           return $arr;
     }
 }

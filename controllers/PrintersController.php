@@ -25,18 +25,21 @@
 class PrintersController {
     //put your code here
     public function actionIndex(){
-
-        echo 'Printers list';
         
         $printList = Printer::getListPrinters();
         
         if($printList == 0) $error = 1;
+        
+        $floor = Printer::getAllFloors();
+        $department = Printer::getAllDepartments();
+        $cartrige = Printer::getAllCartriges();
+        $status = Printer::getAllStatuses();
        
         require_once (ROOT. TMPL. 'printers.php');
         
-        echo "<pre>";
-        var_dump($printList);
-        echo "</pre>";
+        /*echo "<pre>";
+        var_dump($status);
+        echo "</pre>";*/
 
         return true;
     }
