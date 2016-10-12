@@ -9,6 +9,7 @@
 return array(
     'printers' => 'printers/index',
     'printers/([0-9]+)' => 'printers/view/$1',
+    'printers/edit/([0-9]+)' => 'printers/edit/$1',
     'cartriges' => 'cartriges/index',
     
     '' => 'site/index',

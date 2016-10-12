@@ -157,111 +157,11 @@
                     </div>
                   <?php endforeach; ?>
                   <?php endif; ?>
-                  <!--
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/3030.jpg" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/Samsung SCX_ds_4824FN.jpg" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/scx5637.jpeg" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/Samsung SCX_ds_4824FN.jpg" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <!--...-->
-		  
-		  <!-- 12 Изображение 
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/print.png" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/print.png" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			  <img src="img/print.png" alt="...">
-			  <div class="caption">
-				<h3>Имя принтера</h3>
-				<p>Этаж <strong>1</strong></p>
-				<p>Отдел <strong>чвапвапыавпр</strong></p>
-				<p>Юнит <strong>0000-0000</strong></p>
-				<p>Картридж <strong>205</strong></p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-			  </div>
-			</div>
-		  </div> -->
-  
 		</div>
 	</main>
 	<!--Футер-->
 	  <footer>
-		<p >info by IT Kursk</p>   <?php var_dump($_POST); ?>
+		<p >info by IT Kursk</p> 
 	  </footer>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

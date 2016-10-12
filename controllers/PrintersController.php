@@ -44,4 +44,14 @@ class PrintersController {
         return true;
     }
     
+    public static function actionView($id){
+        
+        
+        
+    }
+    
+    public static function actionEdit($id){
+        
+    }
+    
 }
