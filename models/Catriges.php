@@ -16,6 +16,10 @@ class Catriges {
     
     public static function getSumAllCarteiges(){ //получаем сумму всех картриджей(доставленных и замененных) по запросу ниже
         
+        /*SELECT c.name as Имя, sum(aC.value) as Сумма FROM actionsCartriges aC
+        INNER JOIN cartriges c ON aC.id_cartriges = c.id
+        GROUP BY c.name;*/
+        
         $sql = "SELECT c.name as name, sum(aC.value) as value FROM actionsCartriges aC
                 INNER JOIN cartriges c ON aC.id_cartriges = c.id
                 GROUP BY c.name;";
